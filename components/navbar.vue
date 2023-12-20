@@ -1,7 +1,7 @@
 <template>
     <header :class="{ 'nav-hidden': scrollingDown || !atTop }">
       <a class="logo" href="/">
-        <img src="/large-bubustein-4.png" alt="BUBUSTEIN Logo" />
+        <img src="/large-bubustein-5.png" alt="BUBUSTEIN Logo" />
       </a>
       <nav :class="{ 'nav-open': isNavOpen }">
         <ul class="nav-bar">

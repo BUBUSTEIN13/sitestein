@@ -29,7 +29,7 @@
 		
 	  <!--───────────────Projects───────────────-->
 	  <div id="projects"> 
-		 <h1>My Projects.<hr></h1>
+		 <h1>My Projects<hr></h1>
 		  <p>Here are some of my projects, you may like.</p>
 		  <div class="work-box">
 		  <div class="work">
@@ -166,7 +166,7 @@
 		<!--──────────────Contact────────────────-->
 	  <div id="contact">
 		  <!--────social media links─────-->
-		   <h1>Contact.<hr></h1>
+		   <h1>Contact<hr></h1>
 		   <p>Feel free to contact me on Discord</p>
 		    <div class="social-media">
         <a href="https://discord.gg/PrKgF9gNfW" target="_blank"><SimpleIconsDiscord/></a>

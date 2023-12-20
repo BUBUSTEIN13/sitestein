@@ -31,10 +31,10 @@ export default {
       menuItems: [
         { name: 'Projects', link: '/#projects' },
         { name: 'Plans', link: '/#plans' },
-        { name: 'Wiki', link: '/wiki' },
-        { name: 'News', link: '/news' },
         { name: 'FAQ', link: '/#faq' },
-        { name: 'Contact', link: '/#contact' }
+        { name: 'Contact', link: '/#contact' },
+        { name: 'Wiki', link: '/wiki' },
+        { name: 'News', link: '/news' }
       ]
     };
   },

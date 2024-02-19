@@ -122,8 +122,8 @@
               </div>
               <div class="cards__card carda">
                 <!-- Card nou pentru Ultimate -->
-      <h2 class="card__heading">Platinum</h2>
-      <p class="card__price">10$-1000$</p>
+      <h2 class="card__heading">Gold</h2>
+      <p class="card__price">10$+</p>
       <ul role="list" class="card__bullets flow">
         <li>Thanks a lot. I work hard for this mod!</li>
         <li>Exclusive access to beta versions</li>

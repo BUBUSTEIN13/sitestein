@@ -119,27 +119,6 @@
                   
                 </div>
               </div>
-              </div>
-              <div class="cards__row">
-              <div class="cards__card carda">
-                <h2 class="card__heading">Diamond</h2>
-                <p class="card__price">9.50$/month</p>
-                <ul role="list" class="card__bullets flow">
-                  
-                  <li>Custom Money Mod with ARR License.</li>
-                  <li>You can use your custom mod in a server but you CANNOT distribute the mod without my consent.</li>
-                </ul>
-                
-
-
-                <div class="card__buttonsaaa">
-                  <a href="https://www.patreon.com/bubustein" target="_blank" class="card__cta ctaa cta--patreon">
-                    <SimpleIconsPatreon/>
-                     Patreon
-                  </a>
-                  
-                </div>
-              </div>
               <div class="cards__card carda">
                 <!-- Card nou pentru Ultimate -->
       <h2 class="card__heading">Platinum</h2>
@@ -194,29 +173,27 @@
   margin-bottom: 20px; /* Adaugă un margin-bottom la hr-ul de sub titlu */
 }
 #plans{ 	
-	height: 100vh;
+	height: auto;
+  width:auto;
 	color: var(--main-fonts-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+  overflow-y: hidden;
 }
 
-#plans .filter{
-	background: url('https://us-east-1.tixte.net/uploads/files.bubustein.tk/banner2.png') no-repeat;
-	background-size: cover;
-	background-position:center;
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-	opacity:.20;
-}  
+
 
 
 .cards {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .card__buttons {

@@ -108,6 +108,7 @@
                 <h2 class="card__heading">Silver</h2>
                 <p class="card__price">5$/month</p>
                 <ul role="list" class="card__bullets flow">
+                  <li>Everything in Bronze plus:</li>
                   <li>Bring your custom textures and custom recipes</li>
                   <li>Those textures will be added in the next update on Modrinth and Curseforge.</li>
                 </ul>
@@ -126,7 +127,7 @@
       <ul role="list" class="card__bullets flow">
         <li>Thanks a lot. I work hard for this mod!</li>
         <li>Exclusive access to beta versions</li>
-        <li>I can create you a custom mod.</li>
+        
       </ul>
       <div class="card__buttons">
         <a href="https://ko-fi.com/bubustein" target="_blank" class="card__cta ctaa cta--kofi">

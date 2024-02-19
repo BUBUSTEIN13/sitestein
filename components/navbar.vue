@@ -31,7 +31,7 @@ data() {
     menuItems: [
       { name: 'Projects', link: '/#projects' },
       { name: 'Plans', link: '/#plans' },
-      { name: 'FAQ', link: '/#faq' },
+      { name: 'FAQ', link: 'https://wiki.bubustein.tk/faq' },
       { name: 'Contact', link: '/#contact' },
       { name: 'Wiki', link: 'https://wiki.bubustein.tk/' },
       { name: 'News', link: '/news' }

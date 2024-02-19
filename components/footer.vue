@@ -1,5 +1,5 @@
 <template>
-    <footer class="copyright">© 2022-2023
+    <footer class="copyright">© 2022-2024
         <a href="https://modrinth.com/user/BUBUSTEIN" target="_blank"> BUBUSTEIN.</a>
     </footer>
     </template>

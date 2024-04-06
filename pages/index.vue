@@ -42,7 +42,7 @@
         </div>
 		<div class="card">
 			    <img class="work-img" src="https://us-east-1.tixte.net/uploads/files.bubustein.tk/vanilla.png">
-				 <a href='https://modrinth.com/modpack/bubusteins-vanilla'><!--Link to project-->
+				 <a href="https://modrinth.com/modpack/bubusteins-vanilla" target="_blank"><!--Link to project-->
 				<div class="work-content">Tired of Optifine? This modpack is for you!</div>
          </a></div>
 			<div class="card">
@@ -54,7 +54,7 @@
 			
         <div class="card">
 			    <img class="work-img" src="https://us-east-1.tixte.net/uploads/files.bubustein.tk/rotransitcollection.png">
-				 <a href='/ro-transit'><!--Link to project-->
+				 <a href="https://modrinth.com/resourcepack/ro-transit" target="_blank"><!--Link to project-->
 				<div class="work-content"> RTC adds 4 announcement sounds in Romanian railway stations, some custom signs, and some train models for MTR!</div>
          </a></div> 
 		  </div>

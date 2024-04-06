@@ -358,6 +358,29 @@ hr {
 .toggle .line3{
 	transform: rotate(45deg) translate(-5px,-6px);
 }
+.hamburger {
+	display: none;
+}
+
+.hamburger div{
+	width: 30px;
+	height: 3px;
+	background: #dbdbdb;
+	margin: 5px;
+	transition:all 0.3s ease;
+}
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
 
 @keyframes navLinkFade{
 	from{
@@ -369,21 +392,11 @@ hr {
 		transform:translatex(0px);
 	}
 }
-
-/*────────────────── 
-    media queries
-──────────────────*/
-
-
-
+/* MEDIA MOBILE */
 @media only screen and (max-width: 1484px) and (min-width: 1214px) {
 	.work{
         padding:20px 20%;
     }
-	#plans{
-		margin-top:200px !important;
-		margin-bottom:200px !important;
-	}
 }
 @media only screen and (max-width: 1214px) and (min-width: 1000px) {
 	.work{
@@ -394,7 +407,7 @@ hr {
 
 @media only screen and (max-width: 500px) {
 
-	#home, #projects,#faq, #plans, #contact{
+	#projects, #plans, #contact{
         overflow-x: hidden;
 	}
 	header{
@@ -406,22 +419,22 @@ hr {
 		left: 30px;
 	}
 	.nav-show{
-		opacity: 1;
+		opacity: 0;
 	}	 
-	.nav-bar {
-		position: fixed;
+	.nav-bar{
+		position:fixed;
 		top: 0px;
-		right: 0;
-		width: 60%;
+		right:0;
+		width:60%;
 		height: 100vh;
-		display: flex;
+		display:flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
-		background: var(--main-header-background);
-		transform: translateX(100%);
+		justify-content:space-evenly;
+		background:var(--main-header-background);
+		transform:translatex(100%);
 		transition: transform 0.5s ease-in;
-		z-index: 1;
+		z-index: -1;
 	}
 	.hamburger{
 		position:absolute;
@@ -431,14 +444,8 @@ hr {
 		cursor:pointer;
 		z-index: 5;
 	}	
-	.nav-bar li {
-		opacity: 0;
-	}
-	#plans{
-		margin-top:300px !important;
-	}
-	#projects{
-		margin-bottom: 300px !important;
+	.nav-bar li{
+		opacity:0;
 	}
 }
 

@@ -6,8 +6,8 @@
     <nav :class="{ 'nav-open': isNavOpen }">
       <ul class="nav-bar">
         <li v-for="(menuItem, index) in menuItems" :key="index">
-        <a class="nav-link" :href="menuItem.link" @click="closeNav">{{ menuItem.name }}</a>
-      </li>
+          <a class="nav-link" :href="menuItem.link" @click="closeNav">{{ menuItem.name }}</a>
+        </li>
       </ul>
       <div class="hamburger" @click="toggleNav">
         <div class="line1"></div>
@@ -19,68 +19,77 @@
 </template>
 <script>
 export default {
-components:{
-  
-},
-data() {
-  return {
-    scrollingDown: false,
-    atTop: true,
-    lastScrollTop: 0,
-    isNavOpen: false, // Adăugarea variabilei pentru deschiderea/închiderea meniului
-    menuItems: [
-      { name: 'Projects', link: '/#projects' },
-      { name: 'Plans', link: '/#plans' },
-      { name: 'FAQ', link: 'https://wiki.bubustein.tk/faq' },
-      { name: 'Contact', link: '/#contact' },
-      { name: 'Wiki', link: 'https://wiki.bubustein.tk/' },
-      { name: 'News', link: '/news' }
-    ]
-  };
-},
-mounted() {
-  window.addEventListener('scroll', this.handleScroll);
-},
-beforeDestroy() {
-  window.removeEventListener('scroll', this.handleScroll);
-},
-methods: {
-  toggleNav() {
-    this.isNavOpen = !this.isNavOpen; // Invertim starea meniului la fiecare apăsare pe butonul hamburger
+  components: {
   },
-  closeNav() {
-  this.isNavOpen = false;
-},
-
-  handleScroll() {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > this.lastScrollTop && currentScroll > 100) {
-      this.scrollingDown = true;
-    } else {
-      this.scrollingDown = false;
+  data() {
+    return {
+      scrollingDown: false,
+      atTop: true,
+      lastScrollTop: 0,
+      isNavOpen: false,
+      menuItems: [
+        { name: 'Home', link: '/' },
+        { name: 'Download', link: '/download' },
+        { name: 'Wiki', link: '/wiki' },
+        { name: 'Credits', link: '/credits' },
+        { name: 'Discord', link: 'https://discord.gg/PrKgF9gNfW' }
+      ]
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    toggleNav() {
+      this.isNavOpen = !this.isNavOpen;
+    },
+    closeNav() {
+      this.isNavOpen = false;
+    },
+    handleScroll() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > this.lastScrollTop && currentScroll > 100) {
+        this.scrollingDown = true;
+      } else {
+        this.scrollingDown = false;
+      }
+      this.atTop = currentScroll <= 0;
+      this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }
-
-    this.atTop = currentScroll <= 0;
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }
-}
 };
 </script>
 
 <style scoped>
-/* Poți importa stilurile din fișierul extern direct aici sau le poți adapta conform nevoilor */
 @import url('~/assets/style.css');
+
 header {
-/* Alte stiluri */
-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  background: rgba(10, 10, 15, 0.9);
+  backdrop-filter: blur(10px);
 }
+
 .nav-hidden {
-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
+
 .nav-open {
-transform: translateY(0%);
+  transform: translateY(0%);
 }
-/* Poți adăuga și alte stiluri specifice pentru componenta Navbar aici */
-/* ... */
+
+/* Navbar background on scroll */
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 15, 0.95), transparent);
+  pointer-events: none;
+}
+
+header {
+  position: fixed;
+}
 </style>

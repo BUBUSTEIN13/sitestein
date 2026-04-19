@@ -1,6 +1,6 @@
 <template>
-    <footer class="copyright">© 2022-2024
-        <a href="https://modrinth.com/user/BUBUSTEIN" target="_blank"> BUBUSTEIN.</a>
+    <footer class="copyright">© 2023-2026
+        <a href="https://github.com/bubustein13/" target="_blank"> BUBUSTEIN.</a>
     </footer>
     </template>
     <style scoped>

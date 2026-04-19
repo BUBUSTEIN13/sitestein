@@ -283,6 +283,25 @@ footer {
 	height: 100%;
     background-color: var(--main-header-background);
 }
+footer {
+  background: var(--bg-secondary);
+  padding: 40px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+footer a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--accent-emerald);
+  text-decoration: underline;
+}
 
 .copyright {
 	color: #fff;

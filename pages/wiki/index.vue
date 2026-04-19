@@ -2,13 +2,8 @@
   <div class="container">
     <navbar />
 
-    <main class="news-container">
-      <div class="hero-section">
-        <h1>News</h1>
-        <p class="subtitle">Stay updated with the latest mod announcements and updates</p>
-      </div>
-
-      <div class="news-page">
+    <main class="wiki-container">
+      <div class="construction-page">
         <div class="construction-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
@@ -16,16 +11,25 @@
             <line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>
         </div>
-        <h2>News Coming Soon</h2>
-        <p class="construction-text">The news section is currently being built.</p>
-        <p class="construction-subtext">Follow us on Discord for the latest updates!</p>
+        <h1>Wiki Under Construction</h1>
+        <p class="construction-text">The wiki documentation is currently being built.</p>
+        <p class="construction-subtext">Please check back later or visit the download page for more information.</p>
 
-        <a href="https://discord.gg/PrKgF9gNfW" target="_blank" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-          </svg>
-          Join Discord
-        </a>
+        <div class="construction-buttons">
+          <a href="/download" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download Page
+          </a>
+          <a href="/" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            Home Page
+          </a>
+        </div>
       </div>
     </main>
 
@@ -90,46 +94,28 @@ body {
   flex-direction: column;
 }
 
-.news-container {
+.wiki-container {
   flex: 1;
   padding-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px clamp(20px, 4vw, 48px) clamp(50px, 6vw, 80px);
 }
 
-.hero-section {
+.construction-page {
   text-align: center;
-  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 48px);
-}
-
-.hero-section h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 800;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-emerald));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.subtitle {
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-  color: var(--text-secondary);
-}
-
-.news-page {
-  text-align: center;
-  max-width: 550px;
-  margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 48px) clamp(50px, 6vw, 80px);
+  max-width: 600px;
+  padding: 60px 40px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 50px 40px;
 }
 
 .construction-icon {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 25px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
   background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
   border-radius: 50%;
   display: flex;
@@ -139,8 +125,8 @@ body {
 }
 
 .construction-icon svg {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   color: #1a3a2c;
 }
 
@@ -149,23 +135,34 @@ body {
   50% { transform: scale(1.05); }
 }
 
-.news-page h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
+.construction-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-emerald));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .construction-text {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .construction-subtext {
   font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.construction-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -181,19 +178,30 @@ body {
 }
 
 .btn svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #5865F2, #4752c4);
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+  color: #1a3a2c;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.35);
-  color: #fff;
+  box-shadow: 0 8px 25px rgba(242, 193, 78, 0.35);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-emerald);
+  transform: translateY(-2px);
 }
 
 footer {
@@ -212,5 +220,20 @@ footer a {
 footer a:hover {
   color: var(--accent-emerald);
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .construction-page {
+    padding: 40px 25px;
+  }
+
+  .construction-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>

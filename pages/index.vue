@@ -1,450 +1,234 @@
 <template>
-    <!-- import the boilerplate meta tags -->
-    <div class="container">
-		<!--────────────────Header───────────────-->
-	<navbar />
-	<main>
-		<!--─────────────────Home────────────────-->
-	  <div id="home">
-		 <div class="filter"></div>
-		 <section class="intro">
-		  <h1>BUBUSTEIN<hr></h1>
-		  <p>Hello, I'm BUBUSTEIN and i'm the developer of Bubustein's Money Mod. <br>Ever wish Minecraft had a money mod with banknotes, coins, and cash? <br>Search no further! You now have Bubustein's Money Mod, which contains US Dollars,<br> Euros, Pound sterling, Canadian dollars, and more. Even an ATM is available.</p>
-		  <p>I like to play Minecraft in our Roleplay Server</p>
-      
-			  
-		  <!--────social media links─────-->
-			 
-		  <div class="social-media">
-        <a href="https://discord.gg/PrKgF9gNfW" target="_blank"><SimpleIconsDiscord/></a>
-			  <a href="https://twitter.com/BubusteinO" target="_blank"><SimpleIconsX /></a>
-			 <!-- <a href="/youtube" target="_blank"><SimpleIconsYoutube/></a>-->
-        <a href="https://modrinth.com/user/BUBUSTEIN" target="_blank"><SimpleIconsModrinth/></a>
-		<a href="https://www.curseforge.com/minecraft/mc-mods/bubustein-money" target="_blank"><SimpleIconsCurseforge/></a>
-		    </div>
-			 
-		 </section> 
-	  </div>  
-	  
-		
-	  <!--───────────────Projects───────────────-->
-	  <div id="projects"> 
-		 <h1>My Projects<hr></h1>
-		  <p>Here are some of my projects, you may like.</p>
-		  <div class="work-box">
-		  <div class="work">
-		<!--───────────────card───────────────-->
-			
-			<div class="card">
-			    <img class="work-img" src="/logo1a.png">
-				<!--Link to project-->
-				<a href="https://modrinth.com/mod/bubustein-money" target="_blank"><div class="work-content"> <b style="size:50px;">Bubustein's Money Mod. <br> Brings irl money into Minecraft!</b></div></a>
-        </div>
-		<div class="card">
-			    <img class="work-img" src="https://us-east-1.tixte.net/uploads/files.bubustein.tk/vanilla.png">
-				 <a href="https://modrinth.com/modpack/bubusteins-vanilla" target="_blank"><!--Link to project-->
-				<div class="work-content">Tired of Optifine? This modpack is for you!</div>
-         </a></div>
-			<div class="card">
-			    <img class="work-img" src="https://us-east-1.tixte.net/uploads/files.bubustein.tk/roleplay.png">
-				 <!--Link to project-->
-				<a href="https://modrinth.com/modpack/bubustein" target="_blank"> <div class="work-content">BUBUSTEIN's Roleplay Collection is the official roleplay modpack used by BUBUSTEIN's Server! </div></a>
-            </div>
-            
-			
-        <div class="card">
-			    <img class="work-img" src="https://us-east-1.tixte.net/uploads/files.bubustein.tk/rotransitcollection.png">
-				 <a href="https://modrinth.com/resourcepack/ro-transit" target="_blank"><!--Link to project-->
-				<div class="work-content"> RTC adds 4 announcement sounds in Romanian railway stations, some custom signs, and some train models for MTR!</div>
-         </a></div> 
-		  </div>
-		  </div>
-	  </div>
-	  <div id="plans">
-          <h1>Plans<hr class="plans-divider"></h1>
-      
-          <!-- Carduri pentru diferitele planuri -->
-          <div class="main__cards cards">
-            <div class="cards__inner">
-              <div class="cards__row">
-              <div class="cards__card carda">
-                <h2 class="card__heading">Free Plan</h2>
-                <p class="card__price">Free</p>
-                <ul role="list" class="card__bullets flow">
-                  <li>Basic features</li>
-                  <li>Download my mod from Modrinth or Curseforge</li>
-                </ul>
-                <div class="card__buttons">
-                  <a href="https://modrinth.com/user/BUBUSTEIN" target="_blank" class="cta cta--modrinth wider">
-                    <SimpleIconsModrinth />
-                     Modrinth
-                  </a>
-                  
-                  <a href="https://www.curseforge.com/minecraft/mc-mods/bubustein-money" target="_blank" class="cta cta--curseforge wider">
-                    <SimpleIconsCurseforge />
-                     Curseforge
-                  </a>
-                </div>
-              </div>
-            
-              <div class="cards__card carda">
-                <h2 class="card__heading">Bronze</h2>
-                <p class="card__price">2.50$/month</p>
-                <ul role="list" class="card__bullets flow">
-                  <li>Everything in Free plus:</li>
-                  <li>Early Access for that month</li>
-                  <li>Priority in adding new things to Modrinth/Curseforge mod</li>
-                </ul>
-                <div class="card__buttonsaa">
-                  <a href="https://www.patreon.com/bubustein" target="_blank" class="card__cta ctaa cta--patreon">
-                    <SimpleIconsPatreon/>
-                     Patreon
-                  </a>
-                  
-                </div>
-              </div>
-              
-              <div class="cards__card carda">
-                <h2 class="card__heading">Silver</h2>
-                <p class="card__price">5$/month</p>
-                <ul role="list" class="card__bullets flow">
-                  <li>Everything in Bronze plus:</li>
-                  <li>Bring your custom textures and custom recipes</li>
-                  <li>Those textures will be added in the next update on Modrinth and Curseforge.</li>
-                </ul>
-                <div class="card__buttonsaaa">
-                  <a href="https://www.patreon.com/bubustein" target="_blank" class="card__cta ctaa cta--patreon">
-                    <SimpleIconsPatreon/>
-                     Patreon
-                  </a>
-                  
-                </div>
-              </div>
-              <div class="cards__card carda">
-                <!-- Card nou pentru Ultimate -->
-      <h2 class="card__heading">Gold</h2>
-      <p class="card__price">10$+</p>
-      <ul role="list" class="card__bullets flow">
-        <li>Thanks a lot. I work hard for this mod!</li>
-        <li>Exclusive access to beta versions</li>
-        
-      </ul>
-      <div class="card__buttons">
-        <a href="https://ko-fi.com/bubustein" target="_blank" class="card__cta ctaa cta--kofi">
-          <SimpleIconsKofi />
-          Kofi
-        </a>
-      </div>
-    </div>
-  </div>
-              <!-- Alte carduri -->
-            </div>
-            <div class="overlay cards__inner"></div>
-          </div>
-          
-      </div>
-		<!--──────────────Contact────────────────-->
-	  <div id="contact">
-		  <!--────social media links─────-->
-		   <h1>Contact<hr></h1>
-		   <p>Feel free to contact me on Discord</p>
-		    <div class="social-media">
-        <a href="https://discord.gg/PrKgF9gNfW" target="_blank"><SimpleIconsDiscord/></a>
-		    </div>
-		  </div>
+  <div class="container">
+    <navbar />
 
-	</main>
-      <Footer />
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">BUBUSTEIN</h1>
+          <p class="hero-subtitle">Bringing Real-World Currency Into Minecraft</p>
+          <div class="hero-description">
+            <p>Transform your Minecraft experience with Bubustein's Money Mod!</p>
+            <p>From USD to EUR, GBP to JPY — spend, save, and trade with realistic banknotes and coins.</p>
+          </div>
+          <div class="hero-buttons">
+            <a href="/download" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download Mod
+            </a>
+            <a href="/wiki" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              View Wiki
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://discord.gg/PrKgF9gNfW" target="_blank" class="social-btn discord">
+              <SimpleIconsDiscord/>
+              <span>Discord</span>
+            </a>
+            <a href="https://modrinth.com/mod/bubustein-money" target="_blank" class="social-btn modrinth">
+              <SimpleIconsModrinth/>
+              <span>Modrinth</span>
+            </a>
+            <a href="https://www.curseforge.com/minecraft/mc-mods/bubustein-money" target="_blank" class="social-btn curseforge">
+              <SimpleIconsCurseforge/>
+              <span>CurseForge</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features">
+        <h2 class="section-title">What's Inside?</h2>
+        <p class="section-subtitle">Everything you need for a complete economy experience</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="/images/icon-coins.png" alt="Coins">
+            </div>
+            <h3>Multiple Currencies</h3>
+            <p>15+ real-world currencies including USD, EUR, GBP, JPY, and more. Collect coins and banknotes from around the world!</p>
+            <div class="feature-tag">200+ Items</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="/images/icon-card.png" alt="Cards">
+            </div>
+            <h3>Debit & Credit Cards</h3>
+            <p>Upgrade your Rusty card to Steel, earn interest on savings, or manage debt with credit cards. Your financial freedom awaits!</p>
+            <div class="feature-tag">5 Card Tiers</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="/images/icon-atm.png" alt="ATM">
+            </div>
+            <h3>ATM Machines</h3>
+            <p>Withdraw, deposit, and transfer money at ATM terminals scattered across the world. Insert your card and manage your finances!</p>
+            <div class="feature-tag">Instant Access</div>
+          </div>
+
+          <div class="feature-card">
+            <small class="soon">Soon - WIP</small>
+            <div class="feature-icon">
+              <img src="/images/icon-wallet.png" alt="Wallet">
+            </div>
+            <h3><span>Wallet System</span></h3>
+            <p>Store your currency and cards in a portable wallet. Right-click to open your personal 18-slot storage container.</p>
+            <div class="feature-tag">Portable</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+              </svg>
+            </div>
+            <h3>Bank System</h3>
+            <p>Create and manage banks with custom exchange rates. Each bank has its own accounts, interest rates, and financial services.</p>
+            <div class="feature-tag">Full Economy</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Exchange Rates</h3>
+            <p>Real-time currency exchange with automatic rate updates. Trade between currencies and watch the market fluctuate!</p>
+            <div class="feature-tag">Live Rates</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Free Forever Section -->
+      <section id="plans">
+        <h2 class="section-title">Free Forever</h2>
+        <p class="section-subtitle">This mod is 100% free. However, you can buy me a coffee</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card free">
+            <div class="pricing-header">
+              <h3>Free Download</h3>
+              <div class="price">$0</div>
+            </div>
+            <ul class="pricing-features">
+              <li>Download from Modrinth or CurseForge</li>
+              <li>All currencies included</li>
+              <li>Basic ATM access</li>
+              <li>Standard card tiers</li>
+              <li>Full bank system</li>
+              <li>Wallet with 18 slots</li>
+            </ul>
+            <div class="pricing-buttons">
+              <a href="https://modrinth.com/mod/bubustein-money" target="_blank" class="cta cta--modrinth">
+                <SimpleIconsModrinth/> Download on Modrinth
+              </a>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/bubustein-money" target="_blank" class="cta cta--curseforge">
+                <SimpleIconsCurseforge/> Download on CurseForge
+              </a>
+            </div>
+          </div>
+
+          <div class="pricing-card donator">
+            <div class="pricing-badge">Donator</div>
+            <div class="pricing-header">
+              <h3>Support Me</h3>
+              <div class="price">$3+</div>
+            </div>
+            <p class="donator-text">If you enjoy this mod, you can buy me a coffee!</p>
+            <ul class="pricing-features">
+              <li>One-time donation</li>
+              <li>No monthly commitment</li>
+              <li>Special Thanks</li>
+              <li>My eternal gratitude</li>
+            </ul>
+            <div class="pricing-buttons">
+              <a href="https://ko-fi.com/bubustein" target="_blank" class="cta cta--kofi">
+                <SimpleIconsKofi/> Buy Me a Coffee
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section id="download">
+        <div class="download-card">
+          <div class="download-content">
+            <h2>Ready to Play?</h2>
+            <p>Download Bubustein's Money Mod for Minecraft 1.20.1, 1.21.1, 1.21.11+</p>
+            <div class="download-platforms">
+              <a href="https://modrinth.com/mod/bubustein-money" target="_blank" class="platform-btn modrinth">
+                <SimpleIconsModrinth/>
+                <span>Modrinth</span>
+                <small>Recommended</small>
+              </a>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/bubustein-money" target="_blank" class="platform-btn curseforge">
+                <SimpleIconsCurseforge/>
+                <span>CurseForge</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <div class="about-text">
+            <p>Hey there! I'm <strong>BUBUSTEIN</strong>, the developer behind Bubustein's Money Mod.</p>
+            <p>I created this mod because I wanted to bring real-world money into Minecraft. Whether you're playing on a roleplay server or just want a more immersive experience, this mod has everything you need.</p>
+            <p>I regularly play on our <a href="https://discord.gg/PrKgF9gNfW" target="_blank">Roleplay Server</a>, so feel free to join and say hi!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Have questions? Need help? I'm here!</p>
+        <div class="contact-links">
+          <a href="https://discord.gg/PrKgF9gNfW" target="_blank" class="contact-btn discord">
+            <SimpleIconsDiscord/>
+            <span>Join our Discord</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
   </div>
 </template>
-<style>
-@import url('~/assets/style.css');
-
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
-/* Stilurile pentru componenta Plans */
-
-.main__heading {
-  font-weight: 600;
-  font-size: 2.25em;
-  margin-bottom: 0.75em;
-  text-align: center;
-  color: #eceff1;
-}
-.plans-divider {
-  margin-bottom: 20px; /* Adaugă un margin-bottom la hr-ul de sub titlu */
-}
-#plans{ 	
-	height: auto;
-  width:auto;
-	color: var(--main-fonts-color);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-  overflow-y: hidden;
-}
-
-
-
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-}
-
-.card__buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2em;
-}
-.card__buttonsaa {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5em;
-}
-.card__buttonsa {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3.30em;
-}
-.card__buttonsaaa {
-  display: flex;
-  justify-content: space-between;
-}
-.cards__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cards__row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-}
-
-.cards__card {
-  flex: 0 0 calc(20% - 20px); /* Ajustează lățimea cardurilor */
-  margin-right: 20px; /* Redu spațiul între carduri */
-  margin-bottom: 20px; /* Adaugă spațiu vertical între rânduri */
-}
-
-.cards__card:last-child {
-  margin-right: 0;
-}
-.cta--modrinth.wider,
-.cta--curseforge.wider {
-  width: calc(45% - 10px); /* Ajustează lățimea butoanelor */
-}
-.carda {
-  --flow-space: 0.5em;
-  --hsl: var(--hue), var(--saturation), var(--lightness);
-  flex: 1 1 14rem;
-  padding: 2.5em 3em;
-  display: grid;
-  grid-template-rows: auto auto auto 1fr;
-  align-items: start;
-  gap: 1.25em;
-  color: #eceff1;
-  background-color: #2b2b2b;
-  border: 2px solid #eceff133;
-  border-radius: 15px;
-}
-
-.card__cta {
-  /* Am adăugat proprietăți pentru a face butonul mai mare și pentru a-l alinia cu conținutul cardului */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1em; /* Ajustează padding-ul pentru a mări butonul */
-  border-radius: 10px; /* Adaugă colțuri rotunjite */
-  background-color: #0d0d0d;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.carda:nth-child(1) {
-  --hue: 165;
-  --saturation: 82.26%;
-  --lightness: 51.37%;
-}
-
-.card__bullets {
-  line-height: 1.4;
-}
-
-.card__bullets li::before {
-  display: inline-block;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
-  transform: translatey(0.25ch);
-  margin-right: 1ch;
-}
-
-.card__heading {
-  font-size: 1.05em;
-  font-weight: 800;
-  font-style:inherit;
-  color:#00a9e2;
-}
-
-.card__price {
-  font-size: 1.75em;
-  font-weight: 700;
-}
-
-.flow > * + * {
-  margin-top: var(--flow-space, 1.25em);
-}
-
-.cta {
-  display: block;
-  align-self: end;
-  margin: 1em 0 0.5em 0;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #00a9e2;
-  padding: 0.7em;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.ctaa {
-  display: block;
-  align-self: end;
-  margin: 1em 0 0.5em 0;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #00a9e2;
-  padding: 0.7em;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.cta--kofi:hover {
-  background-color: magenta;
-}
-
-.cta--patreon:hover {
-  background-color: orange;
-}
-
-.cta--modrinth:hover{
-  background-color: aquamarine;
-  color:black;
-}
-.cta--curseforge:hover{
-  background-color: orangered;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  user-select: none;
-  opacity: var(--opacity, 0);
-  -webkit-mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  transition: 400ms mask ease;
-  will-change: mask;
-}
-
-.overlay .card {
-  background-color: hsla(var(--hsl), 0.15);
-  border-color: hsla(var(--hsl), 1);
-  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
-}
-
-.overlay .cta {
-  display: block;
-  grid-row: -1;
-  width: 100%;
-  background-color: hsl(var(--hsl));
-  box-shadow: 0 0 0 1px hsl(var(--hsl));
-}
-
-:not(.overlay) > .carda {
-  transition: 400ms background ease;
-  will-change: background;
-}
-
-:not(.overlay) > .carda:hover {
-  --lightness: 95%;
-  background: hsla(var(--hsl), 0.1);
-}
-
-.cta--dynamic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7em;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 1em; /* Ajustați margin-top-ul pentru a alinia butoanele */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cta--dynamic svg {
-  /* Stilizare pentru icon-ul SVG, dacă este necesar */
-  /* Modificați stilurile SVG-ului așa cum doriți */
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5em;
-}
-
-.cta--dynamic:hover {
-  background-color: #1a1a1a; /* Culorile butonului la hover */
-}
-</style>
 
 <script>
 import navbar from '~/components/navbar.vue';
 import Footer from '~/components/footer.vue';
-
 import SimpleIconsDiscord from '~/components/SimpleIconsDiscord.vue';
 import SimpleIconsModrinth from '~/components/SimpleIconsModrinth.vue';
 import SimpleIconsCurseforge from '~/components/SimpleIconsCurseforge.vue';
-import SimpleIconsX from '~/components/SimpleIconsX.vue';
-import SimpleIconsPatreon from '~/components/SimpleIconsPatreon.vue';
 import SimpleIconsKofi from '~/components/SimpleIconsKofi.vue';
-export default{
-	components: {
-		navbar,
-		Footer,
-		SimpleIconsDiscord,
-		SimpleIconsModrinth,
-		SimpleIconsCurseforge,
-    SimpleIconsX,
-		SimpleIconsKofi,
-		SimpleIconsPatreon
-		
-	},
-  mounted(){
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-bar');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-});
+export default {
+  components: {
+    navbar,
+    Footer,
+    SimpleIconsDiscord,
+    SimpleIconsModrinth,
+    SimpleIconsCurseforge,
+    SimpleIconsKofi
   }
 };
 </script>

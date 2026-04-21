@@ -65,7 +65,7 @@
               <img src="/images/card_classic.png" alt="Cards">
             </div>
             <h3>Debit & Credit Cards</h3>
-            <p>Upgrade your Rusty card to Steel, earn interest on savings, or manage debt with credit cards. Your financial freedom awaits!</p>
+            <p>Upgrade your Rusty card to Steel, earn interest on savings <i>soon</i>, or manage debt with credit cards. Your financial freedom awaits!</p>
             <div class="feature-tag">5 Card Tiers</div>
           </div>
 

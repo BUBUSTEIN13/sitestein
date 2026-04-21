@@ -213,7 +213,7 @@
             <div class="requirement-card">
               <div class="req-icon">D</div>
               <h4>Storage</h4>
-              <p>100MB free disk space</p>
+              <p>20MB free disk space</p>
             </div>
           </div>
         </div>

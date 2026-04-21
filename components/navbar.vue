@@ -3,17 +3,20 @@
     <a class="logo" href="/">
       <img src="/large-bubustein-8.png" alt="BUBUSTEIN Logo" />
     </a>
-    <nav :class="{ 'nav-open': isNavOpen }">
+
+    <!-- Hamburger AFARA din nav -->
+    <div class="hamburger" :class="{ toggle: isNavOpen }" @click="toggleNav">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <nav :class="{ 'nav-active': isNavOpen }">
       <ul class="nav-bar">
         <li v-for="(menuItem, index) in menuItems" :key="index">
           <a class="nav-link" :href="menuItem.link" @click="closeNav">{{ menuItem.name }}</a>
         </li>
       </ul>
-      <div class="hamburger" @click="toggleNav">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
     </nav>
   </header>
 </template>

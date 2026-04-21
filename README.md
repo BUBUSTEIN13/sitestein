@@ -1,1 +1,1 @@
-https://bubustein.tk
+https://bubustein.com/

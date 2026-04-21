@@ -262,8 +262,8 @@ export default {
       ],
       changelog: [
         {
-          version: 'x.1.0',
-          date: 'April 2025',
+          version: 'x.1.0 RELEASE',
+          date: 'April 2026',
           latest: true,
           added: [
             'Update exchange rates (auto sync every 7 days in the jar using the official BCE XML rates)',
@@ -281,25 +281,36 @@ export default {
           removed: []
         },
         {
-          version: 'x.0.12',
-          date: 'January 2025',
+          version: 'x.0.12 Beta',
+          date: 'September 2025',
           latest: false,
           added: [
-            'Fixed card upgrade not working properly',
-            'New translations: Romanian (RO), German (DE), Polish (PL), Arabic (AR), Wolof (WS), Dutch (NL), Czech (CZ)',
+            'If you have [currency] in your command help description it will appear the currency abreviation (e.g. HUF, RON, EUR)',
+            'Set the max balance per card to 1 000 000 000 (1 Billion)',
+            'New translations: Romanian (RO), German (DE), Polish (PL), Arabic (AR), Shakespearean English (WS), Dutch (NL), Czech (CZ)',
             'Added EGP (Egyptian Pound) currency',
-            'Changed village ATM spawn rate',
+            'Added the KEY (you need it to have access to the Bank Machine, has 50 durability, enchantable with UNBREAKING and MENDING)',
+            'Added new custom landmarks (Cottage, Hotel, Snowy Mansion - high value landmarks, Desert Castle, Gong, Jungle Hut, Mangrove Witch Hut, Swamp Witch Hut - small landmarks)',
             'KEY system for cards',
             'New Rusty and Supreme cards',
-            'Polymer item and Plastic item'
+            'Added Polymer, Polymer Sheet, Plastic, Plastic Card.'
           ],
           changed: [
-            'Improved village ATM placement'
+            'Changed the village houses (now there are different houses for every village with custom loot, regional currencies)',
+            'Changed the recipes for getting smaller banknotes or bigger ones (you now have to go to Crafting Table)',
+            'Changed the Recipes for ATM, Cards',
+            'Change the tax of Steel Card to 1%',
+            'Changed the textures of every card (removed the transparency corners)',
+            'Changed the Villager profession textures (Banker & Exchanger)'
           ],
           fixed: [
-            'Card upgrade bug fix'
+            'Fixed when upgrading from a card to another (if you have money in it the money stays)',
+            'Fixed SetdefaultCurrency command (the command itself will only change in the config file, so only the new cards will have the new currency set)',
+            'Fix setCurrency Command',
+            'Fix withdraw command',
+            'Fix broken textures.'
           ],
-          removed: []
+          removed: ['Removed BGN (Bulgarian Leva)']
         }
       ]
     };

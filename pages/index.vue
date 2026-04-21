@@ -53,7 +53,7 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <img src="/images/icon-coins.png" alt="Coins">
+              <img src="/images/five_euros.png" alt="Coins">
             </div>
             <h3>Multiple Currencies</h3>
             <p>15+ real-world currencies including USD, EUR, GBP, JPY, and more. Collect coins and banknotes from around the world!</p>
@@ -62,7 +62,7 @@
 
           <div class="feature-card">
             <div class="feature-icon">
-              <img src="/images/icon-card.png" alt="Cards">
+              <img src="/images/card_classic.png" alt="Cards">
             </div>
             <h3>Debit & Credit Cards</h3>
             <p>Upgrade your Rusty card to Steel, earn interest on savings, or manage debt with credit cards. Your financial freedom awaits!</p>
@@ -71,7 +71,7 @@
 
           <div class="feature-card">
             <div class="feature-icon">
-              <img src="/images/icon-atm.png" alt="ATM">
+              <img src="/images/atm.png" alt="ATM">
             </div>
             <h3>ATM Machines</h3>
             <p>Withdraw, deposit, and transfer money at ATM terminals scattered across the world. Insert your card and manage your finances!</p>

@@ -12,7 +12,7 @@
             <ul>
               <li><a href="#requirements">Requirements</a></li>
               <li><a href="#fabric">Fabric Installation</a></li>
-              <li><a href="#forge">Forge Installation</a></li>
+              <li><a href="#forge">Forge/NeoForge Installation</a></li>
               <li><a href="#troubleshooting">Troubleshooting</a></li>
             </ul>
           </nav>
@@ -27,15 +27,15 @@
             <h2>Requirements</h2>
             <div class="info-box">
               <h4>Supported Minecraft Versions</h4>
-              <p>1.16.5 • 1.17.x • 1.18.x • 1.19.x • 1.20.x • 1.21.x</p>
+              <p>1.20.1 • 1.21.1 • 1.21.11</p>
             </div>
             <div class="info-box">
               <h4>Supported Mod Loaders</h4>
-              <p>Fabric • Forge</p>
+              <p>Fabric • NeoForge • MinecraftForge</p>
             </div>
             <div class="info-box warning">
               <h4>Important</h4>
-              <p>You need a mod loader (Fabric or Forge) installed before installing this mod. The mod will not work on vanilla Minecraft.</p>
+              <p>You need a mod loader (Fabric, Neoforge or Forge) installed before installing this mod. The mod will not work on vanilla Minecraft.</p>
             </div>
           </section>
 
@@ -46,7 +46,7 @@
               <h3>Step 1: Install Fabric</h3>
               <ol>
                 <li>Download <strong>Fabric Installer</strong> from <a href="https://fabricmc.net/use/installer/" target="_blank">fabricmc.net</a></li>
-                <li>Run the installer (requires Java 17+)</li>
+                <li>Run the installer (requires Java 17 for 1.20.1, Java 21 for 1.21.x and Java 25 for 26.x)</li>
                 <li>Select your Minecraft version</li>
                 <li>Click "Install" to create a Fabric profile</li>
               </ol>
@@ -76,9 +76,10 @@
             <h2>Forge Installation</h2>
 
             <div class="step">
-              <h3>Step 1: Install Forge</h3>
+              <h3>Step 1: Install NeoForge/Forge</h3>
               <ol>
-                <li>Download <strong>Forge Installer</strong> from <a href="https://files.minecraftforge.net/" target="_blank">files.minecraftforge.net</a></li>
+                <li>Download <strong>Forge Installer</strong> from <a href="https://files.minecraftforge.net/" target="_blank">files.minecraftforge.net</a> <br> Download <strong>NeoForge Installer</strong> from <a href="https://https://neoforged.net/" target="_blank">neoforged.net</a></li>
+                
                 <li>Select your Minecraft version</li>
                 <li>Choose "Install Client" (for single-player) or "Install Server" (for servers)</li>
                 <li>Run the installer and wait for completion</li>
@@ -244,10 +245,12 @@ body {
 }
 
 .doc-content h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+  color: #f2c14e;
+  text-align: center;
+  background: linear-gradient(135deg, #f2c14e, #2fb586);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

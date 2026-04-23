@@ -10,12 +10,13 @@
             <a href="/wiki" class="back-link">← Back to Wiki</a>
             <h4>Commands</h4>
             <ul>
-              <li><a href="#account">Account Commands</a></li>
-              <li><a href="#bank">Bank Commands</a></li>
-              <li><a href="#transfer">Transfer Commands</a></li>
-              <li><a href="#card">Card Commands</a></li>
-              <li><a href="#currency">Currency Commands</a></li>
-              <li><a href="#admin">Admin Commands</a></li>
+              <li><a href="#help">Help</a></li>
+              <li><a href="#accounts">Accounts & Cards</a></li>
+              <li><a href="#banks">Banks</a></li>
+              <li><a href="#transfer">Transfers</a></li>
+              <li><a href="#cash">Deposit & Withdraw</a></li>
+              <li><a href="#currency">Currency & Rates</a></li>
+              <li><a href="#admin">Admin / Economy</a></li>
             </ul>
           </nav>
         </aside>
@@ -23,134 +24,264 @@
         <!-- Content -->
         <article class="doc-content">
           <h1>Commands Guide</h1>
-          <p class="intro">All mod commands with usage examples and permission requirements.</p>
+          <p class="intro">
+            All Bubustein’s Money commands start with the <code>/bubustein</code> prefix.
+            This page explains what each command does, its syntax and who can run it.
+          </p>
 
-          <section id="account" class="doc-section">
-            <h2>Account Commands</h2>
+          <!-- HELP -->
+          <section id="help" class="doc-section">
+            <h2>Help</h2>
+
             <div class="command-block">
-              <code>/account create [bank] [currency]</code>
-              <p>Create a new bank account. Example: <code>/account create MainBank USD</code></p>
+              <code>/bubustein help</code>
+              <p>Shows the help menu with all available commands split into pages.</p>
             </div>
+
             <div class="command-block">
-              <code>/account balance</code>
-              <p>View your current account balance and currency.</p>
-            </div>
-            <div class="command-block">
-              <code>/account delete [iban]</code>
-              <p>Delete your account (admin only for other accounts).</p>
-            </div>
-            <div class="command-block">
-              <code>/account info [iban]</code>
-              <p>View detailed account information including interest rates.</p>
+              <code>/bubustein help [page]</code>
+              <p>Opens a specific help page. Example: <code>/bubustein help 2</code></p>
             </div>
           </section>
 
-          <section id="bank" class="doc-section">
+          <!-- ACCOUNTS & CARDS -->
+          <section id="accounts" class="doc-section">
+            <h2>Account & Card Commands</h2>
+
+            <div class="command-block">
+              <code>/bubustein accounts</code>
+              <p>Shows all your bank accounts with IBAN, type, bank prefix, card tier, balance and active status.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein accounts [player]</code>
+              <p>View another player’s accounts (OP only, permission ≥ 2). Example: <code>/bubustein accounts Steve</code></p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein accounts [player] [page]</code>
+              <p>Browse through account pages for a specific player.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein createAccount &lt;type&gt; [bank]</code>
+              <p>
+                Creates a new account for you. The account kind (DEBIT / CREDIT / SAVINGS) is chosen via the
+                <code>type</code> argument with tab-completion in game.
+              </p>
+              <small>
+                The real syntax uses a <code>type</code> argument and an optional bank prefix,
+                but in-game, suggestions guide you when typing the command.
+              </small>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein deleteAccount [iban]</code>
+              <p>Deletes one of your own accounts that has zero balance. Only eligible IBANs are suggested.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein link</code>
+              <p>
+                Links the card in your main hand to one of your inactive accounts.
+                If you only have one inactive account, it links directly; otherwise, a selection menu is shown.
+              </p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein link [iban]</code>
+              <p>
+                Explicitly links the empty card in your main hand to the given IBAN,
+                if that inactive account belongs to you.
+              </p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein invalidate</code>
+              <p>Opens a menu listing your active accounts that can be remotely invalidated.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein invalidate [iban]</code>
+              <p>
+                Remotely invalidates the active account with that IBAN.
+                The account becomes inactive and any linked physical cards turn into Empty Cards.
+              </p>
+            </div>
+          </section>
+
+          <!-- BANKS -->
+          <section id="banks" class="doc-section">
             <h2>Bank Commands</h2>
+
             <div class="command-block">
-              <code>/bank create [name] [prefix] [exchangeRate]</code>
-              <p>Create a new bank (requires admin permissions).</p>
-              <small>Example: /bank create "National Bank" NB 1.0</small>
+              <code>/bubustein banks</code>
+              <p>Lists all registered banks with prefix, name, active status and whether they are protected.</p>
             </div>
+
             <div class="command-block">
-              <code>/bank delete [bankName]</code>
-              <p>Delete a bank and all its accounts (admin only).</p>
+              <code>/bubustein bank create &lt;PREFIX&gt; &lt;Name...&gt;</code>
+              <p>
+                Creates a new bank with a 4-letter prefix (A–Z only) and a name.
+                Requires operator permissions.
+              </p>
+              <small>Example: <code>/bubustein bank create BSTN "Bubustein National Bank"</code></small>
             </div>
+
             <div class="command-block">
-              <code>/bank list</code>
-              <p>List all available banks in the server.</p>
+              <code>/bubustein bank delete &lt;PREFIX&gt;</code>
+              <p>
+                Requests deletion of a non-protected bank you own.
+                Accounts are migrated to a protected bank and you must confirm the action.
+              </p>
             </div>
+
             <div class="command-block">
-              <code>/bank info [bankName]</code>
-              <p>View bank details including exchange rates.</p>
-            </div>
-            <div class="command-block">
-              <code>/bank setrate [bankName] [rate]</code>
-              <p>Set exchange rate for a bank (admin only).</p>
+              <code>/bubustein confirm</code>
+              <p>Confirms the last dangerous action (bank deletion) within a short time window.</p>
             </div>
           </section>
 
+          <!-- TRANSFER -->
           <section id="transfer" class="doc-section">
             <h2>Transfer Commands</h2>
+
             <div class="command-block">
-              <code>/transfer [iban] [amount]</code>
-              <p>Transfer money to another account using IBAN.</p>
+              <code>/bubustein transfer &lt;player&gt; &lt;iban&gt; &lt;amount&gt;</code>
+              <p>
+                Transfers money from the account linked to your card (in main hand) to the given IBAN
+                belonging to the target player. You can send to other players’ DEBIT accounts or any of your own accounts.
+              </p>
+              <small>
+                Example: <code>/bubustein transfer Steve RO22BSTN... 100</code> – sends 100 in your account currency.
+              </small>
             </div>
+
             <div class="command-block">
-              <code>/pay [player] [amount]</code>
-              <p>Pay another player directly from your account.</p>
-            </div>
-            <div class="command-block">
-              <code>/deposit [amount]</code>
-              <p>Deposit money from your inventory into your account.</p>
-            </div>
-            <div class="command-block">
-              <code>/withdraw [amount]</code>
-              <p>Withdraw money from your account to your inventory.</p>
+              <code>/bubustein transfer &lt;player&gt; &lt;iban&gt; &lt;amount&gt; &lt;currency&gt;</code>
+              <p>
+                Same as above, but you specify the transfer currency (EUR, USD, etc.).
+                The amount is converted from that currency to the sender and target account currencies.
+              </p>
             </div>
           </section>
 
-          <section id="card" class="doc-section">
-            <h2>Card Commands</h2>
+          <!-- CASH (DEPOSIT & WITHDRAW) -->
+          <section id="cash" class="doc-section">
+            <h2>Deposit & Withdraw</h2>
+
             <div class="command-block">
-              <code>/card create [type]</code>
-              <p>Create a new card. Types: debit, credit, savings</p>
+              <code>/bubustein deposit &lt;amount&gt;</code>
+              <p>
+                Deposits physical money from your inventory into the account associated with your card,
+                using the account’s own currency and all matching currency items you hold.
+              </p>
             </div>
+
             <div class="command-block">
-              <code>/card upgrade [tier]</code>
-              <p>Upgrade your card tier. Tiers: rusty, classic, gold, steel, supreme</p>
+              <code>/bubustein deposit &lt;amount&gt; &lt;currency&gt;</code>
+              <p>
+                Deposits a specific amount using only items of the given currency (if physical items exist for it),
+                then converts that amount into your account’s currency.
+              </p>
             </div>
+
             <div class="command-block">
-              <code>/card bind [iban]</code>
-              <p>Bind your card to a specific account.</p>
-            </div>
-            <div class="command-block">
-              <code>/card unbind</code>
-              <p>Remove the account binding from your card.</p>
-            </div>
-            <div class="command-block">
-              <code>/card info</code>
-              <p>View your current card details and bound account.</p>
+              <code>/bubustein withdraw &lt;amount&gt;</code>
+              <p>
+                Withdraws money from your account into physical currency items, using the account’s currency.
+                For DEBIT cards, a withdrawal fee applies depending on the card tier.
+              </p>
             </div>
           </section>
 
+          <!-- CURRENCY -->
           <section id="currency" class="doc-section">
-            <h2>Currency Commands</h2>
+            <h2>Currency & Rates Commands</h2>
+
             <div class="command-block">
-              <code>/currency list</code>
-              <p>View all available currencies and their exchange rates.</p>
+              <code>/bubustein rates</code>
+              <p>Shows all available currencies and their exchange rates relative to EUR, plus last update time.</p>
             </div>
+
             <div class="command-block">
-              <code>/currency convert [from] [to] [amount]</code>
-              <p>Convert an amount from one currency to another.</p>
+              <code>/bubustein rates &lt;currency&gt;</code>
+              <p>
+                Shows detailed information for a single currency:
+                EUR → that currency and that currency → EUR conversion lines.
+              </p>
             </div>
+
             <div class="command-block">
-              <code>/currency rate [from] [to]</code>
-              <p>Check the current exchange rate between two currencies.</p>
+              <code>/bubustein defaultCurrency</code>
+              <p>Displays the current default server currency used when no valid default is configured elsewhere.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein setcurrency &lt;currency&gt;</code>
+              <p>
+                Changes the currency of the account linked to the card in your hand,
+                converting the full balance into the new currency respecting max balance limits.
+              </p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein setdefaultcurrency &lt;currency&gt;</code>
+              <p>Sets the default server currency. OP only.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein updateRates</code>
+              <p>Forces an asynchronous update of all exchange rates from the external source. OP only.</p>
             </div>
           </section>
 
+          <!-- ADMIN -->
           <section id="admin" class="doc-section">
-            <h2>Admin Commands</h2>
+            <h2>Admin & Economy Commands</h2>
+
             <div class="info-box warning">
               <h4>Admin Only</h4>
-              <p>The following commands require permission level 2 (OP).</p>
+              <p>The commands below require permission level ≥ 2 (operator) and are logged to the console.</p>
             </div>
+
             <div class="command-block">
-              <code>/admin setbalance [player] [amount]</code>
-              <p>Set a player's account balance directly.</p>
+              <code>/bubustein ecoAddMoney &lt;amount&gt;</code>
+              <p>Adds money to the account linked to the card in your hand, using the account currency.</p>
             </div>
+
             <div class="command-block">
-              <code>/admin invalidate [player]</code>
-              <p>Invalidate all accounts for a player.</p>
+              <code>/bubustein ecoAddMoney &lt;amount&gt; &lt;currency&gt;</code>
+              <p>
+                Adds money using a specific currency and converts that amount into the account’s currency
+                before applying it.
+              </p>
             </div>
+
             <div class="command-block">
-              <code>/admin reloadconfig</code>
-              <p>Reload mod configuration without server restart.</p>
+              <code>/bubustein ecoSetMoney &lt;amount&gt;</code>
+              <p>Sets the balance of the account linked to your card to the given amount (in account currency).</p>
             </div>
+
             <div class="command-block">
-              <code>/admin export</code>
-              <p>Export all bank data to a file.</p>
+              <code>/bubustein ecoSetMoney &lt;amount&gt; &lt;currency&gt;</code>
+              <p>
+                Sets the balance based on an amount expressed in another currency,
+                which is converted into the account’s currency.
+              </p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein resetMoney</code>
+              <p>Resets the account linked to your card to a balance of 0 and notifies the owner if it isn’t you.</p>
+            </div>
+
+            <div class="command-block">
+              <code>/bubustein invalidateAll &lt;player-uuid&gt;</code>
+              <p>
+                Invalidates all active accounts for the given player UUID, marks the data as dirty
+                and notifies the player if they are online.
+              </p>
             </div>
           </section>
 
@@ -276,10 +407,12 @@ body {
 }
 
 .doc-content h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+  color: #f2c14e;
+  text-align: center;
+  background: linear-gradient(135deg, #f2c14e, #2fb586);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

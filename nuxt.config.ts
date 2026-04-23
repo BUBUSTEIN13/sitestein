@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   
   devtools: { enabled: false },
+  compatibilityDate: 'latest',
   css: ['~/assets/style.css'],
   app: {
     head: {
@@ -8,7 +9,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'copyrighted-site-verification', content: '3b85856d3c0c4276' },
+        { name: 'copyrighted-site-verification', content: '7190812fb2c716c9' },
 
         // SEO
         {
@@ -17,7 +18,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'keywords',
-          content: 'minecraft economy mod, minecraft banking mod, fabric economy mod, neoforge money mod, bubustein money mod'
+          content: 'minecraft economy mod, minecraft banking mod, fabric economy mod, neoforge money mod, bubustein money mod, cash mod, coins mod, banknotes mod, atm mod, minecraft cash mod, fabric money mod'
         },
 
         // Open Graph (preview pe Discord, social media)

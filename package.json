@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "bubustein-com-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,12 +11,12 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.8.2",
-    "vue": "^3.3.12",
-    "vue-router": "^4.2.5"
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.33",
+    "vue-router": "^5.0.6"
   },
   "dependencies": {
-    "cac": "^6.7.14",
-    "commander": "^13.1.0"
+    "cac": "^7.0.0",
+    "commander": "^14.0.3"
   }
 }

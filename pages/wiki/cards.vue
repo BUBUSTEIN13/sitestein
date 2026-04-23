@@ -272,10 +272,11 @@ body {
 }
 
 .doc-content h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+  color: #f2c14e;
+  background: linear-gradient(135deg, #f2c14e, #2fb586);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

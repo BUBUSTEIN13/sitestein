@@ -16,7 +16,8 @@
     "vue-router": "^5.0.6"
   },
   "dependencies": {
-    "cac": "^7.0.0",
-    "commander": "^14.0.3"
+    "cac": "^6.7.14",
+    "commander": "^13.1.0",
+    "glob": "^13.0.6"
   }
 }

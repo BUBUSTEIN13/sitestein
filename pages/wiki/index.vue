@@ -3,34 +3,106 @@
     <navbar />
 
     <main class="wiki-container">
-      <div class="construction-page">
-        <div class="construction-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
-          </svg>
+      <!-- Hero -->
+      <section class="wiki-hero">
+        <div class="hero-content">
+          <h1>BUBUSTEIN's Money Mod</h1>
+          <h2>Wiki & Documentation</h2>
+          <p>Your complete guide to mastering the economy in Minecraft</p>
         </div>
-        <h1>Wiki Under Construction</h1>
-        <p class="construction-text">The wiki documentation is currently being built.</p>
-        <p class="construction-subtext">Please check back later or visit the download page for more information.</p>
+      </section>
 
-        <div class="construction-buttons">
-          <a href="/download" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-            </svg>
-            Download Page
+      <!-- Navigation Cards -->
+      <section class="wiki-nav">
+        <h2>Explore the Wiki</h2>
+        <div class="nav-grid">
+          <a href="/wiki/installation" class="wiki-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+            </div>
+            <h3>Installation</h3>
+            <p>Learn how to install the mod on Fabric, NeoForge or Forge for Minecraft 1.20.1, 1.21+</p>
+            <span class="card-tag">Getting Started</span>
           </a>
-          <a href="/" class="btn btn-secondary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-            Home Page
+
+          <a href="/wiki/commands" class="wiki-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0-3-3 3 3 0 0 0-3 3"/>
+              </svg>
+            </div>
+            <h3>Commands</h3>
+            <p>Complete list of all mod commands with usage examples and permissions</p>
+            <span class="card-tag">Reference</span>
+          </a>
+
+          <a href="/wiki/under_construction" class="wiki-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+              </svg>
+            </div>
+            <h3>Banks</h3>
+            <p>Create banks, manage accounts, set exchange rates</p>
+            <span class="card-tag">Economy</span>
+          </a>
+
+          <a href="/wiki/under_construction" class="wiki-card">
+            <div class="card-icon">
+              <img src="/images/card_classic.png" alt="Cards">
+            </div>
+            <h3>Cards</h3>
+            <p>Debit cards, credit cards, savings* cards - upgrade paths and features</p>
+            <span class="card-tag" style="background-color: var(--accent-gold-dark);">5 Debit Tiers</span><span class="card-tag" style="background-color: var(--accent-emerald-dark);">3 Credit Tiers</span>
+          </a>
+
+          <a href="/wiki/under_construction" class="wiki-card">
+            <div class="card-icon">
+              <img src="/images/atm.png" alt="ATM">
+            </div>
+            <h3>ATM Guide</h3>
+            <p>How to use ATM machines - withdraw, deposit, transfer, and more</p>
+            <span class="card-tag">Tutorial</span>
+          </a>
+
+          <a href="/wiki/under_construction" class="wiki-card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM9 22V12h6v10"/>
+              </svg>
+            </div>
+            <h3>Buildings</h3>
+            <p>Where to find ATM machines and bank buildings in different biomes</p>
+            <span class="card-tag">Locations</span>
           </a>
         </div>
-      </div>
+      </section>
+
+      <!-- Quick Info -->
+      <section class="quick-info">
+        <h2>Quick Info</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Supported Versions</h4>
+            <p>Minecraft 1.20.1, 1.21.1, 1.21.11</p>
+          </div>
+          <div class="info-card">
+            <h4>Currencies</h4>
+            <p>15+ real-world currencies</p>
+          </div>
+          <div class="info-card">
+            <h4>Card Tiers</h4>
+            <p>Rusty, Classic, Gold, Steel, Supreme for Debit</p>
+            <p>Classic, Gold, Platinum for Credit cards</p>
+          </div>
+          <div class="info-card">
+            <h4>Loan Interest</h4>
+            <p>15%, 10%, 5% depending on tier</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <Footer />
@@ -50,29 +122,17 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg-primary: #0f2a22;
-  --bg-secondary: #133328;
-  --bg-card: #1a4333;
-  --bg-card-hover: #205541;
-
-  --accent-emerald: #2fb586;
-  --accent-emerald-dark: #1f8a63;
-  --accent-gold: #f2c14e;
-  --accent-gold-dark: #d4a22a;
-  --accent-cream: #f5ecd2;
-
-  --text-primary: #f7f2e2;
-  --text-secondary: #cfe3d6;
-  --text-muted: #9ab5a6;
-
-  --border-color: rgba(245, 236, 210, 0.12);
-
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a24;
+  --accent-gold: #ffd700;
+  --accent-cyan: #00d4ff;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -82,158 +142,206 @@ export default {
 }
 
 body {
-  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-.wiki-container {
-  flex: 1;
+.wiki-container main {
   padding-top: 70px;
+}
+
+/* Hero */
+.wiki-hero {
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px clamp(20px, 4vw, 48px) clamp(50px, 6vw, 80px);
-}
-
-.construction-page {
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  padding: 60px 20px;
   text-align: center;
-  max-width: 600px;
-  padding: 60px 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
 }
 
-.construction-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 30px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.construction-icon svg {
-  width: 50px;
-  height: 50px;
-  color: #1a3a2c;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-.construction-page h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-emerald));
+  margin-bottom: 15px;
+  color: #f2c14e;
+  text-align: center;
+  background: linear-gradient(135deg, #f2c14e, #2fb586);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-content h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #f2c14e;
+  text-align: center;
+  background: linear-gradient(135deg, #f2c14e, #2fb586);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.construction-text {
-  font-size: 1.2rem;
+.hero-content p {
   color: var(--text-secondary);
-  margin-bottom: 12px;
+  font-size: 1.1rem;
 }
 
-.construction-subtext {
-  font-size: 1rem;
-  color: var(--text-muted);
+/* Wiki Navigation */
+.wiki-nav {
+  padding: 80px 20px;
+  background: var(--bg-secondary);
+}
+
+.wiki-nav h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--text-primary);
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wiki-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(255, 215, 0, 0.1);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-icon svg {
+  width: 50px;
+  height: 50px;
+  stroke: var(--accent-gold);
+}
+
+.wiki-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.wiki-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.card-tag {
+  margin-top:10px;
+  padding: 5px 12px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-cyan);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Quick Info */
+.quick-info {
+  padding: 80px 20px;
+  background: var(--bg-primary);
+}
+
+.quick-info h2 {
+  text-align: center;
+  font-size: 2rem;
   margin-bottom: 40px;
 }
 
-.construction-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
-  color: #1a3a2c;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(242, 193, 78, 0.35);
-}
-
-.btn-secondary {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+.info-card {
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
 }
 
-.btn-secondary:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--accent-emerald);
-  transform: translateY(-2px);
+.info-card h4 {
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
+.info-card p {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Footer */
 footer {
   background: var(--bg-secondary);
   padding: 30px;
   text-align: center;
   border-top: 1px solid var(--border-color);
-  color: var(--text-secondary);
 }
 
 footer a {
-  color: var(--accent-gold);
+  color: var(--accent-cyan);
   text-decoration: none;
 }
 
-footer a:hover {
-  color: var(--accent-emerald);
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .construction-page {
-    padding: 40px 25px;
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
   }
-
-  .construction-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
+  
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

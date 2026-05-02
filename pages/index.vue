@@ -112,6 +112,76 @@
         </div>
       </section>
 
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">Screenshots from Bubustein's Money Mod.</p>
+
+        <div class="gallery-grid">
+          <button
+            v-for="(image, index) in galleryImages"
+            :key="index"
+            class="gallery-item"
+            type="button"
+            @click="openGallery(index)"
+            :aria-label="`Open image ${index + 1}: ${image.title}`"
+          >
+            <img :src="image.src" :alt="image.title" loading="lazy" />
+            <div class="gallery-overlay">
+              <h3>{{ image.title }}</h3>
+              <p>{{ image.description }}</p>
+            </div>
+          </button>
+        </div>
+
+        <div
+          v-if="lightboxOpen"
+          class="lightbox"
+          @click.self="closeGallery"
+          role="dialog"
+          aria-modal="true"
+          :aria-label="galleryImages[currentImage].title"
+        >
+          <button class="lightbox-close" type="button" @click="closeGallery" aria-label="Close gallery">
+            ×
+          </button>
+
+          <button
+        v-if="galleryImages.length > 1"
+        class="lightbox-nav lightbox-prev"
+        type="button"
+        @click.stop="prevImage"
+        aria-label="Previous image"
+      >
+        <span>‹</span>
+      </button>
+
+
+
+          <div class="lightbox-content">
+            <img
+              :src="galleryImages[currentImage].src"
+              :alt="galleryImages[currentImage].title"
+              class="lightbox-image"
+            />
+            <div class="lightbox-caption">
+              <h3>{{ galleryImages[currentImage].title }}</h3>
+              <p>{{ galleryImages[currentImage].description }}</p>
+            </div>
+          </div>
+
+          <button
+        v-if="galleryImages.length > 1"
+        class="lightbox-nav lightbox-next"
+        type="button"
+        @click.stop="nextImage"
+        aria-label="Next image"
+      >
+        <span>›</span>
+      </button>
+        </div>
+      </section>
+
       <!-- Free Forever Section -->
       <section id="plans">
         <h2 class="section-title">Free Forever</h2>
@@ -229,6 +299,98 @@ export default {
     SimpleIconsModrinth,
     SimpleIconsCurseforge,
     SimpleIconsKofi
+  },
+
+  data() {
+    return {
+      lightboxOpen: false,
+      currentImage: 0,
+      galleryImages: [
+        {
+          src: '/images/gallery/ATM_GUI.png',
+          title: 'ATM System',
+          description: 'ATM interface and banking interactions.'
+        },
+        {
+          src: '/images/gallery/card_collection_8.0.12.png',
+          title: 'Card Tiers',
+          description: 'Different debit and credit card tiers.'
+        },
+        {
+          src: '/images/gallery/Credit_Cards.png',
+          title: 'Credit Cards',
+          description: 'Get credit cards from Banker.'
+        },
+        {
+          src: '/images/gallery/currency_showcase_8.0.12.png',
+          title: 'Currencies',
+          description: 'Banknotes and coins from multiple real-world currencies.'
+        },
+        {
+          src: '/images/gallery/bank_machine_8.0.12.png',
+          title: 'Bank Machine',
+          description: 'Bank Machine blocks'
+        },
+        {
+          src: '/images/gallery/bank_machine_key_8.0.12.png',
+          title: 'Bank Machine GUI',
+          description: 'You need a key to access this GUI.'
+        },
+        {
+          src: '/images/gallery/villager_8.0.12.png',
+          title: 'Banker Villager',
+          description: 'This villager can give you the best trades if you are lucky.'
+        },
+        {
+          src:'/images/gallery/banker_trades_8.0.12.png',
+          title: 'Banker Trades',
+          description: 'It can give you full enchanted tools and weapons at level 5 - Master'
+        },
+        {
+          src: '/images/gallery/mansion_8.0.12.png',
+          title: 'The Mansion',
+          description: 'The oldest structure'
+        }
+      ]
+    };
+  },
+
+  mounted() {
+    window.addEventListener('keydown', this.handleKeydown);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.handleKeydown);
+  },
+
+  methods: {
+    openGallery(index) {
+      this.currentImage = index;
+      this.lightboxOpen = true;
+      document.body.style.overflow = 'hidden';
+    },
+
+    closeGallery() {
+      this.lightboxOpen = false;
+      document.body.style.overflow = '';
+    },
+
+    nextImage() {
+      this.currentImage = (this.currentImage + 1) % this.galleryImages.length;
+    },
+
+    prevImage() {
+      this.currentImage =
+        (this.currentImage - 1 + this.galleryImages.length) % this.galleryImages.length;
+    },
+
+    handleKeydown(e) {
+      if (!this.lightboxOpen) return;
+
+      if (e.key === 'Escape') this.closeGallery();
+      if (e.key === 'ArrowRight') this.nextImage();
+      if (e.key === 'ArrowLeft') this.prevImage();
+    }
   }
 };
 </script>

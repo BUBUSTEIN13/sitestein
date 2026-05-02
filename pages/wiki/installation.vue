@@ -190,14 +190,14 @@ body {
 .sidebar {
   width: 260px;
   padding: 40px 30px;
+  padding-top: calc(70px + 40px);
   background: var(--bg-secondary);
   border-right: 1px solid var(--border-color);
   position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
+  top: 0;
+  height: 100dvh;
   overflow-y: auto;
 }
-
 .back-link {
   display: inline-block;
   color: var(--accent-cyan);

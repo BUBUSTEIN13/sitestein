@@ -284,10 +284,15 @@
               </p>
             </div>
           </section>
-
+          <!---
           <div class="next-page">
             <a href="/wiki/banks" class="next-btn">
               Next: Banks Guide →
+            </a>
+          </div> --->
+          <div class="next-page">
+            <a href="/" class="next-btn">
+              ← Back to Home
             </a>
           </div>
         </article>
@@ -356,11 +361,12 @@ body {
 .sidebar {
   width: 260px;
   padding: 40px 30px;
+  padding-top: calc(70px + 40px);
   background: var(--bg-secondary);
   border-right: 1px solid var(--border-color);
   position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
+  top: 0;
+  height: 100dvh;
   overflow-y: auto;
 }
 

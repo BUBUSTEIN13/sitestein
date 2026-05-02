@@ -33,6 +33,7 @@ export default {
       menuItems: [
         { name: 'Home', link: '/' },
         { name: 'Download', link: '/download' },
+        { name: 'Gallery', link: '/#gallery' },
         { name: 'Wiki', link: '/wiki' },
         { name: 'Credits', link: '/credits' },
         { name: 'Discord', link: 'https://discord.gg/PrKgF9gNfW' }

@@ -258,7 +258,7 @@ export default {
         { name: '1.20.1', status: 'stable', statusText: 'Stable' },
         { name: '1.21.1', status: 'stable', statusText: 'Stable' },
         { name: '1.21.11', status: 'stable', statusText: 'Stable' },
-        { name: '26.1.x / 26.2', status: 'upcoming', statusText: 'Coming Soon' }
+        { name: '26.1.2 / 26.2', status: 'stable', statusText: 'Stable' }
       ],
       changelog: [
         {

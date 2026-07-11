@@ -27,7 +27,7 @@
             <h2>Requirements</h2>
             <div class="info-box">
               <h4>Supported Minecraft Versions</h4>
-              <p>1.20.1 • 1.21.1 • 1.21.11</p>
+              <p>1.20.1 • 1.21.1 • 1.21.11 • 26.1.2 • 26.2</p>
             </div>
             <div class="info-box">
               <h4>Supported Mod Loaders</h4>

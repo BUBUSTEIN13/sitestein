@@ -1,0 +1,7 @@
+All Rights Reserved. Copyright (c) 2022-2026 BUBUSTEIN (bubustein.com)
+
+No part of this project (Bubustein's Money Mod) may be copied, modified, decompiled, reverse-engineered,
+redistributed, or used to create derivative works (including addons, overrides, or forks)
+without the prior written permission of the copyright holder.
+
+Unauthorized use, reflection-based access to internal APIs, or integration with unlicensed third-party mods is strictly prohibited.

@@ -32,17 +32,6 @@
               <p>Alternative download</p>
               <span class="download-btn">Download</span>
             </a>
-
-            <a href="https://github.com/BUBUSTEIN13/bubustein-money" target="_blank" rel="noopener noreferrer" class="platform-card github">
-              <div class="platform-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-              </div>
-              <h3>GitHub</h3>
-              <p>Source code & releases</p>
-              <span class="download-btn">View Repo</span>
-            </a>
           </div>
         </div>
       </section>
@@ -69,39 +58,43 @@
           <h2 class="section-title">Changelog</h2>
           <p class="section-subtitle">Major updates, fixes, and content changes across recent versions</p>
 
-          <div class="changelog-list">
-            <article class="release-card" v-for="release in changelog" :key="release.version">
+          <p v-if="changelogError" class="changelog-error">
+            Failed to load changelog. Please try again later.
+          </p>
+
+          <div v-else class="changelog-list">
+            <article class="release-card" v-for="(release, index) in changelog" :key="release.version">
               <div class="release-header">
                 <div>
                   <h3>v{{ release.version }}</h3>
                   <p class="release-date">{{ release.date }}</p>
                 </div>
-                <span v-if="release.latest" class="latest-badge">Latest</span>
+                <span v-if="index === 0" class="latest-badge">Latest</span>
               </div>
 
               <div class="release-content">
-                <div v-if="release.added && release.added.length" class="change-group added">
+                <div v-if="release.added.length" class="change-group added">
                   <h4>Added</h4>
                   <ul>
                     <li v-for="item in release.added" :key="`added-${release.version}-${item}`">{{ item }}</li>
                   </ul>
                 </div>
 
-                <div v-if="release.changed && release.changed.length" class="change-group changed">
+                <div v-if="release.changed.length" class="change-group changed">
                   <h4>Changed</h4>
                   <ul>
                     <li v-for="item in release.changed" :key="`changed-${release.version}-${item}`">{{ item }}</li>
                   </ul>
                 </div>
 
-                <div v-if="release.fixed && release.fixed.length" class="change-group fixed">
+                <div v-if="release.fixed.length" class="change-group fixed">
                   <h4>Fixed</h4>
                   <ul>
                     <li v-for="item in release.fixed" :key="`fixed-${release.version}-${item}`">{{ item }}</li>
                   </ul>
                 </div>
 
-                <div v-if="release.removed && release.removed.length" class="change-group removed">
+                <div v-if="release.removed.length" class="change-group removed">
                   <h4>Removed</h4>
                   <ul>
                     <li v-for="item in release.removed" :key="`removed-${release.version}-${item}`">{{ item }}</li>
@@ -258,62 +251,77 @@ export default {
         { name: '1.20.1', status: 'stable', statusText: 'Stable' },
         { name: '1.21.1', status: 'stable', statusText: 'Stable' },
         { name: '1.21.11', status: 'stable', statusText: 'Stable' },
-        { name: '26.1.2 / 26.2', status: 'stable', statusText: 'Stable' }
+        { name: '26.2', status: 'stable', statusText: 'Stable' },
+        { name: '26.3', status: 'upcoming', statusText: 'Upcoming' }
       ],
-      changelog: [
-        {
-          version: 'x.1.0 RELEASE',
-          date: 'April 2026',
-          latest: true,
-          added: [
-            'Update exchange rates (auto sync every 7 days in the jar using the official BCE XML rates)',
-            'New card system. (and a better one) based by the UUID and other things',
-            'New useful commands.',
-            'ATM GUI.'
-          ],
-          changed: [
-            'Improved performance'
-          ],
-          fixed: [
-            'Various bug fixes',
-            'JEI Compat for 1.21.11 and newer'
-          ],
-          removed: []
-        },
-        {
-          version: 'x.0.12 Beta',
-          date: 'September 2025',
-          latest: false,
-          added: [
-            'If you have [currency] in your command help description it will appear the currency abreviation (e.g. HUF, RON, EUR)',
-            'Set the max balance per card to 1 000 000 000 (1 Billion)',
-            'New translations: Romanian (RO), German (DE), Polish (PL), Arabic (AR), Shakespearean English (WS), Dutch (NL), Czech (CZ)',
-            'Added EGP (Egyptian Pound) currency',
-            'Added the KEY (you need it to have access to the Bank Machine, has 50 durability, enchantable with UNBREAKING and MENDING)',
-            'Added new custom landmarks (Cottage, Hotel, Snowy Mansion - high value landmarks, Desert Castle, Gong, Jungle Hut, Mangrove Witch Hut, Swamp Witch Hut - small landmarks)',
-            'KEY system for cards',
-            'New Rusty and Supreme cards',
-            'Added Polymer, Polymer Sheet, Plastic, Plastic Card.'
-          ],
-          changed: [
-            'Changed the village houses (now there are different houses for every village with custom loot, regional currencies)',
-            'Changed the recipes for getting smaller banknotes or bigger ones (you now have to go to Crafting Table)',
-            'Changed the Recipes for ATM, Cards',
-            'Change the tax of Steel Card to 1%',
-            'Changed the textures of every card (removed the transparency corners)',
-            'Changed the Villager profession textures (Banker & Exchanger)'
-          ],
-          fixed: [
-            'Fixed when upgrading from a card to another (if you have money in it the money stays)',
-            'Fixed SetdefaultCurrency command (the command itself will only change in the config file, so only the new cards will have the new currency set)',
-            'Fix setCurrency Command',
-            'Fix withdraw command',
-            'Fix broken textures.'
-          ],
-          removed: ['Removed BGN (Bulgarian Leva)']
-        }
-      ]
+      changelog: [],
+      changelogLoading: true,
+      changelogError: false
     };
+  },
+  // "mounted" e un hook standard Vue, nu specific Nuxt, deci merge sigur
+  // indiferent de versiunea de Nuxt (2 sau 3). Fetch-ul se face client-side
+  // direct pe fisierul static /CHANGELOG.md din folderul public/.
+  async mounted() {
+    try {
+      const res = await fetch('/CHANGELOG.md');
+      if (!res.ok) {
+        throw new Error(`Failed to fetch CHANGELOG.md: ${res.status}`);
+      }
+      const raw = await res.text();
+      const parsed = this.parseChangelog(raw);
+
+      if (parsed.length === 0) {
+        // Fisierul a fost gasit, dar regex-ul nu a extras nimic -
+        // de obicei inseamna ca formatul headerelor nu se potriveste.
+        throw new Error('CHANGELOG.md was fetched but contained no parsable releases');
+      }
+
+      this.changelog = parsed;
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error(err);
+      this.changelogError = true;
+    } finally {
+      this.changelogLoading = false;
+    }
+  },
+  methods: {
+    parseChangelog(markdown) {
+      const releases = [];
+      const versionBlocks = markdown.split(/\n## \[/).slice(1);
+
+      for (const block of versionBlocks) {
+        const headerMatch = block.match(/^([^\]]+)\]\s*-\s*(.+)/);
+        if (!headerMatch) continue;
+
+        const version = headerMatch[1].trim();
+        const date = headerMatch[2].split('\n')[0].trim();
+
+        if (version.toLowerCase() === 'unreleased') continue;
+
+        const release = { version, date, added: [], changed: [], fixed: [], removed: [] };
+
+        for (const [heading, key] of [
+          ['Added', 'added'],
+          ['Changed', 'changed'],
+          ['Fixed', 'fixed'],
+          ['Removed', 'removed']
+        ]) {
+          const sectionMatch = block.match(new RegExp(`### ${heading}\\n((?:- .+\\n?)+)`));
+          if (sectionMatch) {
+            release[key] = sectionMatch[1]
+              .trim()
+              .split('\n')
+              .map((line) => line.replace(/^- /, '').trim());
+          }
+        }
+
+        releases.push(release);
+      }
+
+      return releases;
+    }
   }
 };
 </script>
@@ -880,5 +888,11 @@ section {
   .narrow-shell {
     width: min(1300px, calc(100% - 32px));
   }
+}
+.changelog-error {
+  text-align: center;
+  color: var(--danger);
+  font-weight: 600;
+  padding: 20px 0;
 }
 </style>

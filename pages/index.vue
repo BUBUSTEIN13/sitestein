@@ -79,7 +79,7 @@
           </div>
 
           <div class="feature-card">
-            <small class="soon">Soon - WIP</small>
+            <!--<small class="soon">Soon - WIP</small>--->
             <div class="feature-icon">
               <img src="/images/icon-wallet.png" alt="Wallet">
             </div>
@@ -89,6 +89,7 @@
           </div>
 
           <div class="feature-card">
+          <small class="soon">Soon - WIP</small>
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
@@ -238,7 +239,7 @@
         <div class="download-card">
           <div class="download-content">
             <h2>Ready to Play?</h2>
-            <p>Download Bubustein's Money Mod for Minecraft 1.20.1, 1.21.1, 1.21.11+</p>
+            <p>Download Bubustein's Money Mod for Minecraft 1.20.1, 1.21.1, 1.21.11, 26.2+</p>
             <div class="download-platforms">
               <a href="https://modrinth.com/mod/bubustein-money" target="_blank" class="platform-btn modrinth">
                 <SimpleIconsModrinth/>
@@ -312,6 +313,16 @@ export default {
           description: 'ATM interface and banking interactions.'
         },
         {
+          src: '/images/gallery/wallet_x.2.0.png',
+          title: 'Wallet',
+          description: 'Wallet Update - Dyeable'
+        },
+        {
+          src: '/images/gallery/wallet_gui.png',
+          title: 'Wallet GUI',
+          description: 'Wallet GUI'
+        },
+        {
           src: '/images/gallery/card_collection_8.0.12.png',
           title: 'Card Tiers',
           description: 'Different debit and credit card tiers.'
@@ -350,6 +361,11 @@ export default {
           src: '/images/gallery/mansion_8.0.12.png',
           title: 'The Mansion',
           description: 'The oldest structure'
+        },
+        {
+          src: '/images/gallery/snowy_mansion_8.0.12.png',
+          title: 'Snowy Mansion',
+          description: 'The structure with the best loot'
         }
       ]
     };

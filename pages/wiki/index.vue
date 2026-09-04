@@ -86,7 +86,7 @@
         <div class="info-grid">
           <div class="info-card">
             <h4>Supported Versions</h4>
-            <p>Minecraft 1.20.1, 1.21.1, 1.21.11</p>
+            <p>Minecraft 1.20.1, 1.21.1, 1.21.11, 26.2</p>
           </div>
           <div class="info-card">
             <h4>Currencies</h4>

@@ -108,6 +108,12 @@
                 The account becomes inactive and any linked physical cards turn into Empty Cards.
               </p>
             </div>
+            <div class="command-block">
+              <code>/bubustein leaderboard [bankprefix]</code>
+              <p>
+                Shows the leaderboard - Top #15 with the debit and credit balance. Also if [bankprefix] is <code>null</code> then every bank will be counted.
+              </p>
+            </div>
           </section>
 
           <!-- BANKS -->

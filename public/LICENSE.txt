@@ -1,7 +1,40 @@
 All Rights Reserved. Copyright (c) 2022-2026 BUBUSTEIN (bubustein.com)
 
-No part of this project (Bubustein's Money Mod) may be copied, modified, decompiled, reverse-engineered,
-redistributed, or used to create derivative works (including addons, overrides, or forks)
-without the prior written permission of the copyright holder.
+This project ("Bubustein's Money Mod") and all of its source code, assets,
+and associated files are the exclusive private property of the copyright
+holder. The source code is NOT publicly available and is not licensed for
+any form of reuse.
 
-Unauthorized use, reflection-based access to internal APIs, or integration with unlicensed third-party mods is strictly prohibited.
+1. NO CODE REUSE
+   No part of this project's source code, compiled bytecode, or assets may
+   be copied, extracted, reused, adapted, or incorporated—in whole or in
+   part, even a single line or function—into any other project, mod, or
+   software, under any circumstances, without prior written permission
+   from the copyright holder.
+
+2. NO ADDONS OR DERIVATIVE WORKS
+   Creating addons, extensions, overrides, forks, patches, or any
+   derivative work that depends on, hooks into, or extends this mod's
+   internal code or APIs is strictly prohibited without prior written
+   permission from the copyright holder. This includes mods that
+   interoperate with this project via reflection, mixins, or ASM.
+
+3. NO DECOMPILATION OR REVERSE ENGINEERING
+   Decompiling, disassembling, reverse-engineering, or otherwise
+   attempting to derive or access the source code of this project is
+   strictly prohibited. The source code is private and was never
+   intended for public disclosure; any such access is unauthorized
+   regardless of the technical method used.
+
+4. DISTRIBUTION
+   Redistribution of the compiled mod file (.jar) is only permitted
+   through the official channels listed below, unmodified and with this
+   license included.
+
+Violation of any of these terms revokes any implicit permission to use
+this software and may result in takedown requests to hosting platforms
+(Modrinth, CurseForge, GitHub, etc.).
+
+Official distribution channels:
+https://modrinth.com/mod/bubustein-money
+https://www.curseforge.com/minecraft/mc-mods/bubustein-money
